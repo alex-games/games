@@ -24,6 +24,8 @@
 #alias a3=2es4eses5es13ew
 #alias a4=4en3en8en4en4e
 #alias a5=es3es7ese
+#alias bree_fnost=8n3e2ne8ne3nw8ne12ne10ne2n
+#alias fnost_bree=9sw3sw10sw10se3sw8sw2s3w8s
 #alias activedoor=#var $doornum=$1
 #alias addp={#write ("$0";"/Volumes/ALEX2006HW/games/mume/players.dat");#print Added player $0}
 #alias aldereon_gh={2s4wn3wn4w2n2wn17w2nwn5w2nw}
@@ -278,7 +280,7 @@
 #alias v1=open screen
 #alias va@*=vv aaa
 #alias venom={#send ("get tail "+$hcon);#send ("get fur "+$hcon);#send ("get smallfluid-sack "+$hcon);put tail kit;put fur kit;put smallfluid-sack kit}
-#alias vv@*=seek rivendell
+#alias vv@*=say citizen
 #alias x1@*=#5 xa
 #alias x10={#10 xx}
 #alias x5={#5 xx}
@@ -292,7 +294,6 @@
 #alias z0@*={open onstruction n;flee}
 #alias z1@*=close underbrush
 #alias z2=open dirt
-#alias zbree=cast 'tel' edlhanecze
 #alias zz@*={open obstruction n;yy}
 #action >+save Saving=#print ("---> "+\$0+" <---")
 #action >+8 A citizen mercenary (&1) taps you on the shoulder.={give 10 silver $1;give 10 celeb $1}
@@ -494,29 +495,30 @@
 #mark preserved blood=bold cyan
 #mark grows=green
 #mark growing=green
+#(@oldtp = 29371, @oldxp = 3941240)
 #($autoopen = "0")
 #($cdoorname = "\"\"")
 #($door1 = "exit")
 #($door2 = "exit")
 #($door3 = "exit")
-#($door4 = "obstruction")
+#($door4 = "taverndoor")
 #($doornum = "1")
-#($gaintp = "0")
-#($gainxp = "6867")
+#($gaintp = "4")
+#($gainxp = "966")
 #($lcorpse = "corpse")
 #($light = "lantern")
 #($lightoff = "snuff lantern")
 #($lighton = "light lantern")
-#($ln = "\033[33mMagneto narrates 'just got scried near lorien'\033[0m")
-#($lt = "\033[32mA weaponsmith tells you 'Sorry, we are closed. We will open at 6am tomorrow.'\033[0m")
+#($ln = "\033[33mShaml narrates 'i take panty's'\033[0m")
+#($lt = "\033[32mAianna tells you 'NICE U took th ecoach'\033[0m")
 #($odoorname = "\"\"")
 #($path_godir = "NONE")
 #($rebash = "yes")
 #($refill = "yes")
-#($reply = "weaponsmith")
+#($reply = "\033[32mAianna")
 #($repo = "0")
-#($sesstp = "0")
-#($sessxp = "0")
+#($sesstp = "4")
+#($sessxp = "966")
 #($swlo = "ON")
 #($target = "tar")
 #($tmp = "You sell ")
