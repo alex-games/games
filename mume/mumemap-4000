@@ -16,7 +16,7 @@
 #alias +a=#action +$0
 #alias -a=#action -$0
 #alias ..=emote mutters : $0
-#alias 00=chan mood wimp
+#alias 00@*=chan mood wimp
 #alias 22=chang mood agg
 #alias 55=chang mood norm
 #alias a1=2s3en14es6en7es4es5enen4en4en3en3e3wsw
@@ -24,8 +24,6 @@
 #alias a3=2es4eses5es13ew
 #alias a4=4en3en8en4en4e
 #alias a5=es3es7ese
-#alias bree_fnost=8n3e2ne8ne3nw8ne12ne10ne2n
-#alias fnost_bree=9sw3sw10sw10se3sw8sw2s3w8s
 #alias activedoor=#var $doornum=$1
 #alias addp={#write ("$0";"/Volumes/ALEX2006HW/games/mume/players.dat");#print Added player $0}
 #alias aldereon_gh={2s4wn3wn4w2n2wn17w2nwn5w2nw}
@@ -52,6 +50,7 @@
 #alias bob@*=cast 'breath'
 #alias boot@*={get boots pack;rem boots;put boots pack;wear boots}
 #alias bowtobm={2nu8w5n2en}
+#alias bree_fnost=8n3e2ne8ne3nw8ne12ne10ne2n
 #alias bs@*=backstab $1
 #alias bt=#if (*$(1)) back $1.troll; #else back troll
 #alias bu@*=#if (*$(1)) cast 'burn' $1; #else cast 'burn'
@@ -95,7 +94,7 @@
 #alias drinkwaterw@*={pour water flask;pour water skin;drink water}
 #alias dunlock={resolvedoor $1;#send ("unlock " + $door)}
 #alias dw@*=drinkwater
-#alias ear=cast 'earth'
+#alias ear@*=cast 'earth'
 #alias eket@*={get eket pouch;wield eket;put thorn pouch;put fang pouch}
 #alias f=flee
 #alias fa=fb aaa
@@ -108,6 +107,7 @@
 #alias find={#print Attempting to find $0 in database...;#! grep -i "$0" /Volumes/ALEX2006HW/games/mume/players.dat}
 #alias fl@*=search q
 #alias fm=fb *man*
+#alias fnost_bree=9sw3sw10sw10se3sw8sw2s3w8s
 #alias fo=fb *orc*
 #alias food={cast 'create f';eat mushroom}
 #alias ft=fb *troll*
@@ -204,11 +204,11 @@
 #alias moria2lorc=ed2ese8s2ws2ese6s
 #alias morthan_oer=6nw3ne3nene2ne2ne4ne5nenene3ne3ne4nw5nw8nw4nw2n
 #alias nocolors={#mark *an Orc*=inverse;#mark *$ the Orc*=inverse;#mark *a Troll*=inverse;#mark *$ the Troll*=inverse;#mark *a Human*=inverse;#mark *$ the Human*=inverse;#mark *$ the Numenorean*=inverse;#mark *$ the Black Numenorean*=inverse;#mark *a Dwarf*=inverse;#mark *$ the Dwarf*=inverse;#mark *an Elf*=inverse;#mark *$ the Elf*=inverse;#mark *a Hobbit*=inverse;#mark *$ the Hobbit*=inverse}
-#alias o0={order follower $0}
+#alias o0@*={order follower $0}
 #alias o1@*={order follower assist}
 #alias o2@*={order follower rescue}
 #alias o3@*=order follower bash
-#alias o4={o0 wake;o0 stand}
+#alias o4@*={o0 wake;o0 stand}
 #alias oc={unlock chest;open chest;get all chest}
 #alias odo={#if (*$(1)) {#var $odoorname=$1; #print ("--- Turn ON opening door: "+$odoorname)}; #else  {#print ("--- Turn OFF opening : "+$odoorname); #var $odoorname=""} }
 #alias oer_morthan=4s2e5se6se5se4sw5swswswsw5sw4sw2sw2swsw3sw3se6s
@@ -256,8 +256,12 @@
 #alias store@*=cast 'store' $0
 #alias str@*=#if (*$(1)) cast 'str' $1; #else cast 'str'
 #alias sword={get sword pack;wield sword;put all pack}
+#alias t0=cast 'teleport' xenimemrab
 #alias t1@*=cast 'teleport' eremuhvy
-#alias t2=cast 'teleport' eyedibhydye
+#alias t2@*=cast 'teleport' eyedibhydye
+#alias t3=cast 'teleport' bliklaailoz
+#alias t4=cast 'teleport' wobkidkelto
+#alias t5=cast 'teleport' cliwadvoif
 #alias talk=$doassist
 #alias tar=#if (*$(1)) {#var $target=$1;settar}; #else unsettar
 #alias tarb=tar *bear*
@@ -268,6 +272,7 @@
 #alias taro=tar *orc*
 #alias tart=tar *troll*
 #alias taurion2spider=dwswsws2wsw2s2wswsw
+#alias tbad_morthan=2nwnwnwnwnwn2wnwnw2nwnwnwnwn3wnwn3wn7wn2w2nwn2wn4w2nwnw2nw5nw2nw
 #alias tg=tell group $0
 #alias thorn@*={get thorn pouch;draw thorn;put all pouch}
 #alias tpreset={#var $sesstp=0;#var @oldtp=0}
@@ -280,7 +285,7 @@
 #alias v1=open screen
 #alias va@*=vv aaa
 #alias venom={#send ("get tail "+$hcon);#send ("get fur "+$hcon);#send ("get smallfluid-sack "+$hcon);put tail kit;put fur kit;put smallfluid-sack kit}
-#alias vv@*=say citizen
+#alias vv@*=#if (*$(1)) cast 'charm' $1; #else cast 'charm' aaa
 #alias x1@*=#5 xa
 #alias x10={#10 xx}
 #alias x5={#5 xx}
@@ -495,30 +500,30 @@
 #mark preserved blood=bold cyan
 #mark grows=green
 #mark growing=green
-#(@oldtp = 29371, @oldxp = 3941240)
+#(@oldtp = 30766, @oldxp = 4624580)
 #($autoopen = "0")
 #($cdoorname = "\"\"")
 #($door1 = "exit")
 #($door2 = "exit")
 #($door3 = "exit")
-#($door4 = "taverndoor")
+#($door4 = "window")
 #($doornum = "1")
-#($gaintp = "4")
-#($gainxp = "966")
+#($gaintp = "0")
+#($gainxp = "1298")
 #($lcorpse = "corpse")
 #($light = "lantern")
 #($lightoff = "snuff lantern")
 #($lighton = "light lantern")
-#($ln = "\033[33mShaml narrates 'i take panty's'\033[0m")
-#($lt = "\033[32mAianna tells you 'NICE U took th ecoach'\033[0m")
+#($ln = "\033[33mMornaghan narrates 'woot...got rid of stored port by casting in Rdell. \"You are unable\033[0m")
+#($lt = "\033[32mBarliman tells you 'I am charging you 13 lauren, nine celeb, and 61 busc now. In\033[0m")
 #($odoorname = "\"\"")
 #($path_godir = "NONE")
 #($rebash = "yes")
 #($refill = "yes")
-#($reply = "\033[32mAianna")
+#($reply = "\033[32mBarliman")
 #($repo = "0")
-#($sesstp = "4")
-#($sessxp = "966")
+#($sesstp = "98")
+#($sessxp = "9480")
 #($swlo = "ON")
 #($target = "tar")
 #($tmp = "You sell ")
