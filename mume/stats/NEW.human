@@ -1,0 +1,92 @@
+HUMAN
+
+
+16, 14, 18, 14, 12, 15,  9, base Human
+18, 13, 17, 14, 12, 15,  9, war Human
+14, 15, 18, 13, 12, 17,  9, cleric Human
+17, 14, 18, 13, 12, 15,  9, battlecleric Human
+
+------------------------------------------------------
+16, 16, 13, 16, 12, 11, 16, base Human
+14, 15, 13, 18, 12, 12, 16, scout Human
+15, 18, 13, 14, 12, 12, 16, mage Human
+18, 15, 13, 16, 12, 12, 14, war Human
+------------------------------------------------------
+15, 16, 13, 16, 12, 10, 17, base Human
+14, 14, 13, 18, 13, 10, 17, scout Human
+15, 18, 14, 14, 12, 10, 16, mage Human
+18, 15, 13, 15, 12, 10, 16, war Human
+------------------------------------------------------
+
+Str:17 Int:12 Wis:17 Dex:12 Con:12 Wil:18 Per: 8. BASE
+Str:15 Int:14 Wis:18 Dex:11 Con:12 Wil:18 Per: 8. CLERIC
+Str:18 Int:11 Wis:15 Dex:14 Con:12 Wil:18 Per: 8. WARRIOR
+
+Str:17 Int: 9 Wis: 8 Dex:17 Con:12 Wil:15 Per:17. BASE
+Str:18 Int: 9 Wis: 8 Dex:18 Con:13 Wil:15 Per:14. WARRIOR
+Str:17 Int: 8 Wis: 8 Dex:18 Con:12 Wil:12 Per:18. SCOUT
+
+Str:17 Int: 9 Wis: 8 Dex:17 Con:13 Wil:14 Per:17. BASE
+Str:18 Int: 9 Wis: 8 Dex:18 Con:13 Wil:15 Per:14. WARRIOR
+Str:15 Int: 9 Wis: 8 Dex:18 Con:13 Wil:14 Per:18. SCOUT
+
+18, 13,  9, 17, 13, 14, 14, BASE Human
+16, 12,  9, 18, 13, 14, 16, scout Human
+18, 12,  9, 18, 13, 15, 12, WAR Human
+
+15, 14, 17, 13, 12, 18,  9, base/Cleric Human
+12, 14, 18, 13, 13, 18, 10, cleric Human
+17, 13, 15, 14, 12, 18,  9, Base Human
+
+18, 13, 12, 15, 12, 18,  9, BEAR Human
+
+15, 14, 17, 14, 12, 17,  9  BASE Human
+12, 14, 18, 14, 12, 18, 10, Cleric Human
+17, 13, 15, 14, 12, 18,  9, WAR Human
+
+15, 16, 17, 12, 12, 17,  9, BASE Human
+14, 14, 18, 12, 12, 18, 10, Cleric Human
+17, 14, 16, 13, 12, 17,  9, WAR Human
+
+15, 13, 18, 14, 12, 17,  9, BASE Human
+17, 12, 16, 15, 12, 17,  9, WAR Human
+13, 15, 18, 14, 12, 17,  9, Cleric Human
+
+16, 14, 16, 13, 12, 18,  9, BASE Human
+17, 13, 14, 15, 12, 18,  9, WAR Human
+14, 14, 18, 12, 12, 18, 10, bash/cleric Human
+
+17, 11, 14, 18, 12, 16,  9, BASE Human
+16, 11, 16, 17, 12, 16, 11, WAR/heal/sanc Human
+18, 10, 12, 18, 13, 16,  9, MAXBEAR Human
+
+14, 14, 18, 12, 12, 18, 10, bash/cleric Human
+
+12, 16, 14, 15, 12, 12, 15,  BASE Black Numenorean
+12, 15, 13, 18, 12, 12, 15, scout Black Numenorean
+12, 18, 15, 13, 12, 12, 15,  mage Black Numenorean
+
+16,  8,  8, 17, 14, 15, 17, [95] SCOUT Human
+18,  9,  8, 15, 14, 18, 13, [95] WAR Human
+17,  8,  8, 16, 14, 17, 15, [95] BASE Human
+
+Str:12 Int:17 Wis:15 Dex:17 Con:12 Wil:13 Per:14. base
+Str:12 Int:15 Wis:14 Dex:18 Con:12 Wil:13 Per:16. scout
+Str:12 Int:18 Wis:16 Dex:14 Con:12 Wil:13 Per:15. mage
+
+
+15, 16, 12, 17, 12, 12, 16, base Human
+14, 18, 13, 15, 12, 12, 16, mage Human
+17, 14, 12, 17, 13, 12, 15, war Human
+15, 14, 11, 18, 12, 12, 17, scout Human
+
+15, 16, 17, 12, 12, 14, 14, base Human
+14, 16, 18, 12, 13, 15, 12, cleric Human
+14, 18, 16, 12, 12, 13, 15, mage Human
+18, 15, 16, 12, 12, 14, 13, war Human
+
+14, 15, 14, 17, 14, 10, 16, base Human
+17, 14, 14, 16, 14, 10, 15, war Human
+14, 17, 15, 15, 14, 10, 15, mage Human
+14, 13, 13, 18, 14, 10, 17, scout Human
+

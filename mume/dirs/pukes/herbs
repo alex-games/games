@@ -1,0 +1,323 @@
+
+Athelas
+Description: A small plant grows here, with long, pointed leaves and flowers
+at its top (35/900)
+When crushed: some long, slender green leaves (2/700)
+Location: some NE from Harlond; near mottled snake N from Forlond; in the
+Old Fornost; OER in brushes; some se from Rivendell
+Used in: Antidote
+Baneberries
+Description: A dark green, foul-smelling shrub grows to about a foot in height
+Loads: some white, egg-shaped berries (5/4000)
+NOTE: loads at certain yeartime only (winter)
+Location: in the vines secretplace n from Tharbad; 6e from Amanrandil
+Temple; some se (across river) from tall orc oak tree; on way
+to tower e from thorns/hedge; ABR - some ne from tower; some ne
+from moors; DT pine forest; 4 n from OER near Warrens; some
+s from WC
+Used in: Drake-slumber poison
+Belladonna
+Description: A large shrub covered with dark violet berries grow here
+Loads: some violet berries (5/350)
+Location: BM area; Shire; Old Forest bonfire; NOC area
+Used in: Belladonna poison
+Blackberries
+Description: A large thorny branched shrub is growing here
+Loads: some blackberries (4/12)
+Location: very common in Shire
+Used in: Antidote
+Blackcurrant
+Description: A shrub with maple-like leaves is growing here
+Loads: a handful of blackcurrant berries (7/500)
+Location: very common in BM area; Shire
+Used in: Soothing-draught
+Bluebells
+Description: A dense carpet of blue flowers dip their heads in the breeze (10/1, nosell)
+Location: Tbad area; Lothlorien
+Blueberries
+Description: A low shrub with bright green, oblong leaves is growing here
+Loads: some blueberries (10/10)
+Location: inside Harlond; Shire
+Bulrushes
+Description: Clusters of slender stems and tall leaves thrive in the mud and shallows (35/1,
+nosell)
+When dropped: A hollow length of stout reed lies here (50/2)
+Location: zone e of Harlond, Dunland near oak tree
+Buttercups
+Description: Yellow flowers, with grey-green foliage, grow in clusters here (10/1, nosell)
+Location: zone e of Harlond; Eregion; Dunland
+Cardamom
+Description: A small flower grows here, with a purple bloom and wide leaves (10/900)
+When crushed: grey-brown powder (5/900)
+Location: BM area; Nen-i-sul; ABR; Lothlorien; NOC area
+Used in: Orc Balm
+Cherries
+Description: A large shrub grows here, its branches loosely spreading
+Loads: some cherries (10/10)
+Location: Lothlorien
+Cinnamon
+Description: A bag of cinnamon lies here (5/1275)
+Location: GH herbalist
+Used in: Seeing, Shadow
+Clover
+Description: A small patch of clover grows here (2/60)
+Location: very common herb
+Used in: Travelling, Walking
+Cloves
+Description: Some small cloves are lying here (2/500)
+Location: GH and Rivendell herbalists
+Used in: Walking
+Conker
+Description: A tall, stately, dome-topped tree grows here
+Loads: a green spine capsule (30/4, nosell)
+Location: Shire - near Hobbiton; Eregion
+Comfrey
+Description: A sturdy plant grows to a height of almost a yard (200/3600)
+When crushed: a bulbous root (17/3600)
+Loads: Midnight Forest nw from the Ford
+Coriander
+Description: A man's-waist high evergreen shrub grows here, with bright green branches
+(1000/1000)
+Loads: several splayed leaves (2/1000)
+Location: GH and Rivendell herbalists; "A dense thicket" - northeastern part of brush
+Daisy-chain
+Description: A band of small flowers is lying here (10/20)
+Location: Loads on Dunlending children
+Elanor
+Description: Delicate golden blooms adorn the ground like a cascade of stars (10/1,
+nosell)
+Location: Lothlorien
+Ferns
+Description: A cluster of dark green, feathery fronds flourishes in the shade (15/1,
+nosell)
+Location: RTT; Dunland; Dunland Ancient Forest; Lothlorien
+Figwort (Turtlehead)
+Description: A tall plant grows here, with grey-green leaves and grey flowers (250/1750)
+When crushed: some grey petals (1/1750)
+Location: Midgewater Marshes, on road to Tbad near Tbad, some SE of Khuzur,
+Lothlorien
+Used in: Antidote
+Foxglove
+Description: A slender plant, with white flowers at the top, grows here (150/1800)
+When crushed: some white petals (1/1800)
+Location: BM area; Shire; Old Forest bonfire
+Foxtail
+Description: A bushy plant grows here, with tall clusters of yellow flowers (230/4000)
+When crushed: some yellow petals (1/4000)
+Location: s of Tharbad
+Ginseng
+Description: A slender plant grows here, a single cluster of flowers atop its narrow stem (75/6000)
+When crushed: a man-like root (5/6000)
+Location: three load places near Last Bridge: 1) 2e 4s, 2) 2e n 7-9e 1-2n;
+3) 2e n 9e s; also somewhere in Misties near Moria (???)
+NB: root also loads even if plant is not loaded, so try 'reveal root'
+even if you don't see plant
+Used in: Travelling
+Goosegrass
+Description: A small and tough weed grows here (75/150)
+When crushed: a crushed stem (3/125)
+Location: Shire; Dunland
+Gooseberry preserve
+* Description (inv): some sticky gooseberry preserve (50/10)
+Location: clay jar near Harlond; same jar in MA area
+Grapes
+Description: Some plump of juicy grapes are growing here (50/6)
+Location: inside Harlond; zone N from Forlond
+Green mushroom
+Description: A small, sickly green mushroom grows here (20/2000)
+Location: secret with shadow in BM; secret behind goblin leader in goblin caves
+Used in: Psylonia poison
+Hemlock
+Description: A tall plant with a perfectly smooth stem gracefully marks the landscape
+(20/1000)
+Location: Old Forest bonfire; sw of Wuda; Warrens Canyon floor; NOC area
+Used in: Drake-slumber poison, Hemlock poison
+Hollyberries
+Description: A bright green holly bush is growing here
+Loads: some hollyberries (4/10)
+Location: very common in Khuzur and Eregion area
+Honeysuckle
+Description: A large shrub grows here, filling the air with a heavy scent
+Loads: a handful of fragile flowers (11/3500)
+Location: some s from road to GH - entrance to Nagrorh; "Loudwater Plains" - 2s2e from
+crossing in the trail (to DT)
+Inkberries
+Description: A holly bush with dark green leaves is growing here
+Loads: some inkberries (4/10)
+Location: very common in Eregion
+Used in: Psylonia poison, Hemlock poison
+Ivory rose
+Description: A beautiful, ivory coloured rose with a tint of crimson is blossoming here (2/15)
+Location: near Khuzur; in Dunland near entrance to NOOC.
+Juniper
+Description: A short evergreen plant, with slightly bluish needles, grows here
+Loads: a cluster of hard, round, black berries (4/10)
+Location: Shire - hills of Scary, 3e from "A Spring" (loads at certain yeartime only);
+some ne of Harlond; Lothlorien; ne3nw from entrance to tall orc;
+near NOC; 2w5n3w2ne3ne2s from door into the Dark Tower; 12e from
+eastern Evil Priest
+Used in: Clear-thoughts, Walking
+Lissuin
+Description: A grouping of soft pink flowers radiates a sweet fragrance (10/1, nosell)
+Location: Ost-In-Edhil
+Marjoram
+Description: A thin, hairy plant, with small, oval leaves, grows here (120/225)
+When crushed: a pinch of pale-green, crushed leaves (2/275)
+Location: Gamgee's garden; NE corner of zone NE from Bree; 8enes10e from moors
+Used in: Walking
+Mauve petals
+Description: Some dried mauve petals can be found here (1/987)
+Locarion: on Big John's experienced smuggler, in sack; Shire, in the underwater
+hermit cave, in sack
+Used in: Clear-thoughts
+Milkweed
+Description: A slender plant grows here, with clusters of tiny pink flowers (180/2000)
+When crushed: a sticky mass of stems, leaves and sap (100/1400)
+Location: Shire - some ne from Rushey; Eregion; Dunland; Warrens area;
+some e from Rivendell
+Used in: Drake-slumber poison
+Mint
+Description: A clean fragrance drifts up from a thick clump of leaves (30/50)
+Location: RTT by Morthan; Tbad area; Eregion
+Niphredil
+Description: Several blooms of snow-white and palest green cover the ground (10/1, nosell)
+Location: Lothlorien
+Orchid
+Description: An orchid of light violet petals blossoms nearby (2/60)
+Location: Lothlorien, Tbad area
+Paprika (pepper)
+Description: A small pile of pungent red powder lies here (7/1000)
+Location: GH and Rivendell herbalists
+Used in: Skillful-oil
+Phosporescent moss
+Description: A patch of moss grows here on a wet, flat stone (15/500, nosell)
+Location: slug cave near road to GH; spirit castle and witch tower near
+Fornost; secret down in Farmer Maggot's barn
+Used in: Seeing
+Poppy (Moon)
+Description: Some orange-red blossoms grow amid grey-green foliage (10/4000)
+(some orange-red flowers)
+Location: w from dt in FOY area; Misties east of Moria
+Used in: Drake-slumber poison
+Red (agaric) mushroom
+Description: A bright red mushroom is growing here (20/250)
+Location: common
+Used in: Belladonna poison, Drake-slumber poison, Psylonia poison
+Red rose
+Description: A detached red rose is lying here (2/50, nosell)
+When crushed: some red petals (1/24)
+Location: zone N from Forlond; inside Harlond/Bree; entrance to Fornost witch
+Used in: Skillful-oil
+Rosemary
+Description: A woody evergreen plant grows here, with many stems reaching upward (365/225)
+(a woody, many-stemmed plant)
+When crushed: several needlelike leaves (2/200)
+Location: BM area; Shire; White sands near road to Fornost; little east of Wuda;
+some s from Tbad; some e from marshes near Bree
+Used in: Seeing, Shadow, Skillful-oil
+Sage (Salvei)
+Description: A waist-high evergreen shrub grows here, with thick, reaching branches
+(500/225)
+Loads: some grey-green leaves (2/100)
+Location: GH area; near road to GH; Shire; some w of Wuda; 8enes10es from moors
+Used in: Clear-thoughts, Soothing-draught, Orc Balm
+Simbelmyne
+Description: A cluster of white star-shaped forget-me-nots fluorish here in reminiscence
+(50/100, nosell)
+Location: inside Bree; ABR
+Strawberries
+Description: Some delicious wild strawberries grow on the ground (20/10)
+Location: BM area; some e of Moria; Dunland
+Tarragon (Estragon)
+Description: A small evergreen plant grows here, its woody stems reaching two feet (20/450)
+(a woody, stemmed plant)
+When crushed: a handful of narrow leaves (2/450)
+Location: at Oak trees; some s from road to GH; Shire; e from entrance to Wyrdda;
+some se of NOC; n3e2n from northern entrace to tall orc
+Used in: Travelling, Orkish draught
+Thistles
+Description: Prickly, white-stemned plants, with blue flower heads grow in abundance (10/1,
+nosell)
+Location: Eregion; Dunland; Lothlorien
+Thyme
+Description: A low, many-branched shrub covers the ground here (125/400)
+When crushed: some scented crushed leaves (2/400)
+Location: Shire; Eregion; n2e2sw7swsw2s4e from Eoghha
+Used in: Clear-thoughts, Soothing-draught
+Tincture of oil
+Description: A small tincture of oil has been placed on the ground (185/1000)
+Location: Fornost herbalist
+Used in: Skillful-oil
+Valerian
+Description: A flowering plant grows here, its fern-like foliage dancing in the breeze
+(230/1200)
+When crushed: a foul-smelling root (10/1200)
+Location: up from giant lizard in BM area; south-western Shire; near Rivendell;
+ABR some sw from tower
+Used in: Drake-slumber poison
+Vanilla
+Description: A long brown bean, emitting a pleasant scent, is here (2/2000)
+Location: GH and Rivendell herbalists
+Used in: Skillful-oil
+Water-lily
+Description: A blooming water-lily floats on the surface of the water (10/150)
+When crushed: some white petals (1/150)
+Location: inside Forlond; in marshes near Bree; near RTT; Dunland
+Used in: Antidote, Soothing-draught, Orc Balm
+White rose
+Description: A detached white rose is lying here (2/50, nosell)
+Location: inside Harlond/Bree
+ ==================================
+There is total of 17 herblores known to me in Mume. Here's the list of them, with loading spots. You'll find out the components yourself once you get the lore :)
+
+Antidote
+Loads on Hillmen Village Chief west of Dark Tower. After mixing components, you gain brown bottle, and after quaffing it, all poisons are removed from you. Also, you gain some extra poison save for some time.
+
+Arachnia
+Loads on crazed dwarf on top of Moria Walls. After mixing compnents, you gain a vial, with what you can poison your weapon or arrows. When someone is affected by arachnia poison, he will fall asleep in 2 ticks (talking about playerpoison here, mobs create poisons with less effective powers). Also, during those 2 ticks, victims moves and mana are drained.
+
+Baker
+Find lonely giant in shire, and pat him. He will guide you afterwards. Components for this lore are: sack of flour, honey, and 3 eggs. After mixing those in kit, you gain 8 bannocks.
+
+Belladonna Poison
+Loads on suspicios assassin near muranog entrance north of windsept ground. Mixing components will create a vial with mild poison (type poison), witch slows down victims regen slightly. Mostly useless.
+
+Psylonia Poison
+Loads on goblin shaman in goblin caves south east of dark tower. Mixing components will create a vial with psylonia poison. It's effects drain victims mana mostly.
+
+Travelling
+Ranger north west of neni-sul bridge teaches this lore to well-travelled persons (need 3k tps per level, lev 21 minimum). He gives a quest, which may involve following things: white bear fur, caverwing tail, sickly green mushroom, ice-demon heart. Ice-demon lives near new orc caves, white bear can be found near moria and near redhorn pass. Cavern-wings live some west of moria west gate. Sickly-green mushroom loads several places on arda (most known one is goblin caves between DT and NOC). Effects of this lore raise your moveregen and your maximum moves, so it's very useful for thieves and warriors.
+
+Walking
+Aldereon the ancient noldo who lives in elven village north of road to gh between greenholm and gh teaches this lore. You have to deliver several letters for him to different persons (the higher level, the harder target). Effects of this lore increase your moveregen for some time.
+
+Venom poison
+Loads on suspicios assassin near Mormaeg entrance north of windsept grounds. Effecs of this poison drain victims hps, victim suffers extensive damage for next couple ticks.
+
+Soothing-Draught
+Nordri the shopkeeper in blue mountains teaches this lore to anyone, who completes his quest. He will ask you to bring him items and plants, depending on your level. Effects of this lore increase greatly your hp-regen, aswell as your max hps for some ticks.
+
+Seeing
+Witch, who lives east of Fornost, may rarely load a book teaching this lore. Effects of this lore give you night vision for 24 ticks. Also, it raises your per by 2 for 24 ticks.
+
+Shadows
+Spirit that sits in library in spirit castle west of road to fornost may rarely carry book teaching this lore. Effects of this lore give you detect invisible and invisibility for 4 nights. It lowers and raises some of your stats for that time also.
+
+Clear-thought
+Bloodwight may extremely rarely load a parchment teaching this lore. Effects of this lore raise your maximum mana by 20%, and it speeds up your manaregen greatly for some ticks. After couple ticks, you experience negative effect, your max-mana is lowered, and is your manaregen for more couple ticks.
+
+Skil-ful oil
+Erestor teaches this lore to anyone, who brings him enemy dark artifact (hbm and elf-hewer should work). Effects of this lore give you +5 db and +5 ob for 4 ticks, followed by another 4 ticks with -5 ob and -5 db.
+
+Orkish-draught
+Gruksh the Orkish butcher teaches this lore only to orcs, who bring him opal or red ruby. After mixing components, you gain 'a flask of orkish draught'. Quaffing this draught gives you 15-35 moves, and you lose some hps. Pukes using draught may also get poisoned (type poison).
+
+Drake-slumber
+Loads in scaly beast area, in eastern side on the beasts (also accessible through e-priest). Prevents scaly beast from crushing down the walls in his cavern. Components are extremely hard to get, some loading at certain time of year, some are hidden.
+
+Orc-Balm
+Thrakghash the Orkish Shaman in wnoc teaches this lore to orcs that bring him a puke artifact (Sting, Glamdring etc). Gives some HP regen for some ticks.
+
+Hemlock poison
+Loads on Wuda the Dunlending Chief in dunland. Allows one to create a mild poison whichs effects include lowering str, dex and con by one and draining some hps/mana/moves of the victim.
+ 

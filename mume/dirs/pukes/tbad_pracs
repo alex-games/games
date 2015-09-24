@@ -1,0 +1,4 @@
+#alias in_tbad={d;open trapdoor;d;4n;d;s;w;open red;n;w;n;open secret;e}
+#alias out_tbad={open secret;w;s;e;open reddoor;e;n;2e;n;u;4s;2u}
+
+# Top of secret is satanas

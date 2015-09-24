@@ -1,0 +1,28 @@
+14, 16, 18, 12, 12, 17,  9, BASE Half-Elf
+13, 14, 19, 12, 12, 18, 10, CLERIC Half-Elf
+16, 15, 17, 12, 12, 17,  9, WAR Half-Elf
+
+15, 14, 16, 14, 12, 18,  9, BASE Half-Elf
+13, 15, 18, 13, 12, 18,  9, CLERIC Half-Elf
+17, 12, 15, 14, 12, 18, 10, WAR Half-Elf
+
+17, 14, 18, 13, 12, 15,  9, battlecleric Half-Elf
+
+14, 13, 19, 12, 12, 18,  9, BASE Half-Elf
+13, 14, 19, 12, 12, 18, 10, Cleric Half-Elf
+16, 13, 18, 13, 12, 17,  8, WAR Half-Elf
+
+12, 16, 17, 17, 12, 15, 10, Scout Half-Elf
+12, 17, 18, 13, 12, 17,  8, CLERIC Half-Elf Quake/charm/sleep/fear Half-Elf
+12, 16, 17, 15, 12, 17, 10, BASE Half-Elf
+
+
+10, 18, 18, 10, 12, 17, 12, base Half-Elf
+10, 18, 18, 10, 12, 15, 15, mage Half-Elf
+10, 17, 19, 10, 12, 18,  9, cleric Half-Elf
+
+10, 18, 18,  9, 12, 18, 10, pure-cleric Half-Elf
+11, 17, 19,  8, 12, 18,  8, pure-cleric Half-Elf
+14, 14, 19,  8, 13, 18,  9, battle-cleric Half-Elf
+
+ 7, 18, 19,  8, 12, 18,  8, max-cleric Half-Elf 

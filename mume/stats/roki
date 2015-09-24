@@ -1,0 +1,15 @@
+Pondus - beorning - multi
+
+Pushit - Beorning - multi
+	Str:18 Int:15 Wis:18 Dex:11 Con:12 Wil:14 Per:8 - Base
+
+Fray - elf - scout/mage
+	12, 17, 15, 17, 12, 12, 16, base
+	12, 18, 16, 14, 12, 13, 16, mage
+	12, 15, 15, 18, 12, 12, 17, scout
+
+Gibson - Beorning
+	16, 15, 17, 10, 13, 17, 10, base Human
+	14, 15, 18,  9, 13, 17, 12, cleric Human
+	18, 15, 15,  9, 13, 17, 10, war Human
+

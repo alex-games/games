@@ -1,0 +1,27 @@
+Pikko - Helf - Cleric/Mage
+	10, 18, 18,  9, 12, 16, 14, base
+	10, 18, 19,  8, 12, 14, 15, mage
+ 	9, 18, 19,  9, 12, 17, 11, cleric
+
+Rusali - helf - cleric
+	Str:13 Int:15 Wis:17 Dex:12 Con:12 Wil:18 Per:13
+
+Reejahei - man - war
+	Str:18 Int:10 Wis:8 Dex:15 Con:18 Wil:15 Per:11 Base
+	18, 10,  8, 16, 17, 16,  8, current
+
+Suriavan - man - battlecleric
+	Str:16 Int:14 Wis:16 Dex:13 Con:12 Wil:18 Per:9 - base
+
+Ykai - man - war/scout
+	Str:15 Int:9 Wis:8 Dex:17 Con:14 Wil:14 Per:17 - base
+	Str:18 Int:10 Wis:8 Dex:17 Con:13 Wil:14 Per:16 - Current
+
+Xane - elf - scout/mage
+	Str:12 Int:17 Wis:15 Dex:17 Con:12 Wil:10 Per:17 - Base
+	Str:13 Int:15 Wis:14 Dex:19 Con:12 Wil:10 Per:17 - scout
+
+Kale - beorning - battlemage
+	Str:15 Int:18 Wis:14 Dex:12 Con:14 Wil:13 Per:14 - base
+	Str:15 Int:18 Wis:16 Dex:12 Con:12 Wil:13 Per:14 - mage
+	Str:17 Int:18 Wis:13 Dex:13 Con:13 Wil:13 Per:13 - battlemage

@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use DB_File;
+
+$kw = shift( @ARGV );
+exit unless $kw;
+
+tie %p, DB_File, 'mume.db';
+
+$tmp = "/tmp/dbe.$$";
+
+open( TMP, ">$tmp" );
+print TMP $p{ $kw };
+close TMP;
+
+system( "vi", $tmp );
+
+open( TMP, $tmp );
+$p{ $kw } = join( "", <TMP> );
+close( TMP );
+
+$p{ $kw } =~ s/\n+$//s;
+
+unlink( $tmp );

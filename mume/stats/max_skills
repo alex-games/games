@@ -1,0 +1,99 @@
+	THIEF (tbad)
+
+upper:
+attack - 16
+dodge  - 23
+
+sewer:
+bkstab - 23 (level 16)
+hide   - 16
+pierce - 16
+sneak  - 23
+-----------
+	78
+
+Eoghha - envenom - 16
+lorien - rdell  - missile - 16
+
+	MAGE (RD)
+rivendell
+armour - 16
+burn   - 11
+quake  - 16
+port   - 16
+bolt   - 16
+block  - 11
+store  - 16
+spray  - 16
+enchant- 22
+shield - 16
+fball  - 16
+portal - 22
+silence - 11
+
+Forlond
+locate  - 15
+con weather - 16
+locate l - 16
+call light - 16
+scry - 16
+watch - 10
+
+tharbad
+shroud - 16
+charm -  16
+sleep  - 16
+
+	CLERIC (RD)
+cure S - 12
+cure c - 12
+rem p  - 12
+heal   - 18
+fear   - 18
+sanc   - 25
+
+Forlond
+str    - 18
+summon - 18
+divin  - 18
+word   - 23
+dispel e - 18
+rem curs - 12
+trans  - 23
+break  - 12
+
+Druid
+create f - 12
+create w - 12
+blind    - 18
+bob      - 18
+harm     - 18
+
+tbad 
+posion   - 12
+curse    - 12
+en drain - 18
+harm     - 18
+
+	RANGER (FNOST)
+
+rivendell
+aware    - 27
+climb    - 13
+command  - 27
+bandage  - 18
+
+fnost
+leader   - 27
+ride     - 13
+track    - 27
+wilderness - 27
+
+	ORC SKILL outside NOC
+
+OOC (GUMAK)
+wilderness - 27
+
+brolg - cure light
+east priest - cure s, blind
+

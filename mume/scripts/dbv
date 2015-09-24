@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+use DB_File;
+
+$kw = shift( @ARGV );
+#print "lookup $kw\n";
+tie %p, DB_File, 'mume.db';
+exit unless $p{ $kw };
+
+print "=" x 30 . "\n";
+print "$p{$kw}\n";
+print "=" x 30 . "\n";

@@ -1,0 +1,116 @@
+
+General Skills
+Stats Needed
+Awareness INT, PER
+Bandage DEX, INT
+Climb STR, WIL
+Command INT, WIL
+Leadership WIL, WIS
+Ride DEX, WIL
+Swim CON, DEX, WIL
+Track INT, PER
+Wilderness STR, WIL
+
+Warrior Skills
+Stats Needed 
+Bash DEX, STR, WIL
+Charge DEX, STR, WIL
+Cleaving Weapons DEX, STR, WIL
+Concussion Weapons CON, STR, WIL
+Endurance CON, WIL
+Kick PER, STR
+Parry DEX, PER, STR
+Rescue DEX, STR, WIL
+Slashing Weapons DEX, PER, STR
+Stabbing Weapons DEX, PER, STR
+Two Handed Weapons CON, STR, WIL
+Unarmed (Troll) DEX, STR, WIL
+
+Thief Skills
+Stats Needed
+Attack DEX, WIL
+Backstab DEX, PER
+Dodge DEX, PER
+Envenom DEX, INT
+Escape DEX, PER
+Hide DEX, PER
+Missile DEX, PER
+Pick DEX, INT
+Piercing DEX, PER, STR
+Search INT, PER
+Sneak DEX, PER
+Steal DEX, PER
+
+Mage Spells
+Stats Needed
+1:Magic Missile INT, PER, WIS
+1:Ventriloquate INT, WIS
+2:Detect Magic INT, PER, WIS
+2:Detect Invisibility INT, PER, WIS
+3:Chill Touch INT, PER, WIS
+3:Armour INT, WIS
+4:Create Light INT, WIS
+4:Locate Magic INT, WIL, WIS
+5:Burning Hands INT, PER, WIS
+5:Shroud INT, WIS
+6:Locate INT, WIL, WIS
+6:Find the Path INT, WIL, WIS
+7:Earthquake INT, WIS
+7:Shocking Grasp INT, PER, WIS
+8:Teleport INT, WIL
+8:Night Vision INT, PER, WIS
+9:Lightning Bolt INT, PER, WIS
+9:Block Door INT, WIL
+10:Control Weather INT, WIL, WIS
+10:Store INT, WIS
+11:Colour Spray INT, PER, WIS
+11:Locate Life INT, WIL, WIS
+12:Call Lightning INT, PER, WIS
+12:Enchant INT, WIS
+13:Shield INT, WIS
+13:Scry INT, WIL, WIS
+14:Charm INT, WIL
+14:Sleep INT, WIL
+15:Fireball INT, PER, WIS
+15:Identify INT, PER, WIS
+16:Dispel Magic INT, WIL
+16:Watch Room INT, WIL, WIS
+17:Silence INT, WIL
+18:Portal INT, WIL
+18:Magic Blast UNKNOWN
+
+Cleric Spells
+Stats Needed 
+1:Detect Evil INT, PER, WIS
+1:Cure Light INT, WIS
+2:Create Water INT, WIS
+2:Detect Poison INT, PER, WIS
+3:Create Food INT, WIS
+4:Cure Blind INT, WIS
+5:Bless INT, WIL, WIS
+5:Cure Serious INT, WIS
+6:Blindness WIL, WIS
+6:Protection from Evil WIL, WIS
+7:Strength INT, WIS
+7:Sense Life INT, WIL, WIS
+8:Summon WIL, WIS
+8:Poison INT, WIS
+9:Cure Critic INT, WIS
+9:Remove Poison INT, WIS
+10:Breath of Briskness INT, WIS
+10:Curse WIL, WIS
+11:Divination INT, PER, WIS
+11:Word of Recall WIL, WIS
+12:Dispel Evil WIL, WIS
+12:Remove Curse WIL, WIS
+13:Energy Drain WIL, WIS
+13:Darkness INT, WIS
+14:Heal INT, WIS
+14:Transfer WIL, WIS
+15:Fear WIL, WIS
+15:Harm INT, WIS
+16:Black Breath WIL, WIS
+17:Break Door WIL, WIS
+17:Hold UNKNOWN
+18:Raise Dead UNKNOWN
+18:Sanctuary INT, WIS

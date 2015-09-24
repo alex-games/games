@@ -1,0 +1,50 @@
+Bink - Helf - cleric
+	Str:10 Int:18 Wis:18 Dex:10 Con:12 Wil:17 Per:12 - base
+
+Dysis - dwarf - cleric
+	Str:16 Int:16 Wis:16 Dex: 7 Con:16 Wil:16 Per:11
+
+Razon - human - cleric/war
+	15, 14, 17, 13, 12, 18,  9, base
+	12, 14, 18, 13, 13, 18, 10, cleric
+	17, 13, 15, 14, 12, 18,  9, war
+	Str:14 Int:15 Wis:18 Dex:11 Con:12 Wil:18 Per:8 - current
+
+Frup - helf - cleric
+        Str:14 Int:14 Wis:19 Dex:10 Con:12 Wil:18 Per:10 - base
+        Str:13 Int:15 Wis:19 Dex:8 Con:12 Wil:18 Per:11 - current
+
+Gravid - man - war/cleric
+        Str:18 Int:14 Wis:14 Dex:11 Con:12 Wil:19 Per:11 - base
+        Str:19 Int:13 Wis:12 Dex:12 Con:13 Wil:19 Per:11 - current
+
+Yensi - dwarf - war/cleric
+        Str:18 Int:11 Wis:16 Dex:10 Con:14 Wil:19 Per: 9 - base
+        Str:19 Int:11 Wis:14 Dex:12 Con:14 Wil:19 Per: 8 - current
+
+Jime - human - war/cleric
+        Str:17 Int:12 Wis:17 Dex:12 Con:12 Wil:18 Per: 8 - base
+        Str:18 Int:11 Wis:15 Dex:14 Con:12 Wil:18 Per: 8 - current
+
+Galvin - helf - cleric
+	Str:13 Int:16 Wis:19 Dex:11 Con:14 Wil:14 Per:13 - base
+	Str:13 Int:18 Wis:19 Dex:10 Con:12 Wil:14 Per:12 - cleric
+	Str:14 Int:17 Wis:19 Dex: 9 Con:13 Wil:14 Per:12 - current
+
+Jeb - dwarf - cleric
+	Str:13 Int:17 Wis:17 Dex: 7 Con:13 Wil:19 Per: 7 - base - quake
+	Str:11 Int:18 Wis:17 Dex: 7 Con:12 Wil:19 Per: 8 - current
+
+Dalton - helf - cleric
+	Str:10 Int:16 Wis:19 Dex: 9 Con:14 Wil:18 Per: 9 - base
+	Str:10 Int:17 Wis:19 Dex: 9 Con:12 Wil:18 Per:10 - current
+
+Joop - dwarf - cleric
+	tr:13 Int:17 Wis:17 Dex: 7 Con:13 Wil:19 Per: 7 - base
+	Str:11 Int:18 Wis:17 Dex: 7 Con:12 Wil:19 Per: 8 - current
+
+Xoki - dwarf - battlecleric
+	Str:16 Int:16 Wis:16 Dex:8 Con:14 Wil:18 Per:8 - base
+
+zukai - dwarf - battlecleric
+	16, 17, 16,  7, 12, 18, 10, [96] (Mume 7) Dwarf

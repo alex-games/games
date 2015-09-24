@@ -1,0 +1,33 @@
+str int wis dex con wil per sum           race
+
+Cleric
+11, 18, 19, 11, 15, 14,  8, [96] (Mume 7) Half-Elf
+11, 19, 18, 12, 14, 13,  9, [96] (Mume 7) Elf
+12, 18, 18, 11, 15, 14,  8, [96] (Mume 7) Human
+
+Warrior
+25,  5,  5,  12, 20, 15,  7, [90] (Mume 7) Troll
+20,  5,  6, 15, 18, 16,  9, [90] (Mume 7) Orc
+17,  8,  9, 12, 18, 18,  8, [90] (Mume 7) Half-Elf
+17,  9,  8, 13, 17, 17,  9, [90] (Mume 7) Elf
+19,  8,  7, 14, 17, 19,  8, [90] (Mume 7) Dwarf
+18,  8,  8, 12, 18, 18,  8, [90] (Mume 7) Human
+
+Mage
+11, 18, 17, 10, 17,  7, 12, [95] (Mume 7) Black Numenorean
+10, 18, 19, 10, 17,  9, 12, [95] (Mume 7) Half-Elf
+13, 15, 16,  9, 18,  7, 14, [95] (Mume 7) Orc
+11, 18, 18,  9, 18,  8, 10, [92] (Mume 7) Human
+10, 19, 18, 10, 17,  7, 11, [92] (Mume 7) Elf
+
+thief
+12,  8,  7, 18, 18,  6, 18, [90] (Mume 7) Black Numenorean
+11,  9,  8, 19, 17,  7, 19, [90] (Mume 7) Elf
+11,  8,  9, 18, 18,  8, 18, [90] (Mume 7) Half-Elf
+12,  8,  8, 18, 18,  8, 18, [90] (Mume 7) Human
+10,  7,  8, 19, 19,  9, 18, [90] (Mume 7) Hobbit
+14,  5,  6, 18, 20,  6, 18, [90] (Mume 7) Orc
+
+thief/mage (elf)
+(thief) 12 18 12 17 13 9 18 - initial thief - BS/sneak(101.5) 187h/105ma
+(mage)  12 19 13 15 13 9 18 - mage rerolled - bolt/fb(103.5) heal(98.1) 187h/113ma

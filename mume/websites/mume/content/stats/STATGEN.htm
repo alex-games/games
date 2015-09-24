@@ -1,0 +1,1348 @@
+
+
+<html>
+
+
+
+
+<!-- Mirrored from www.l0j1k.com/mume/content/stats/STATGEN.htm by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 22 Jul 2011 14:20:51 GMT -->
+<head><script language="JavaScript">
+
+<!--
+
+//////////////// VARIABLES  AFTER THIS LINE ////////////////////
+
+var MUMEVERSION   = 7
+
+var maxPoints     = 175;
+
+var pointsLeft    = 175;
+
+var pointsLeft2    = 175;
+
+var maxValue      = 18
+
+var minValue      = 8
+
+var statCosts     = new Array(55, 45, 36, 28, 21, 15, 10,  6,  3, 1, 0)
+
+var statValues    = new Array(18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8)
+
+var startStats    = new Array(8, 8, 8, 8, 8, 8, 8)
+
+var tmpStats      = new Array(8, 8, 8, 8, 8, 8, 8)
+
+var tmpStats2      = new Array(8, 8, 8, 8, 8, 8, 8)
+
+var raceModifiers = new Array(0, 0, 0, 0, 0, 0, 0)
+
+var playerRace    = "Human"
+
+var ageModifiers  = new Array(0, 0, 0, 0, 0, 0, 0)
+
+var playerAge     = 0;
+
+var ageBrackets   = new Array(0, 18, 24, 32, 40, 50, 65, 90)
+
+var lifeRange     = 1;
+
+//////////////// SUBRUTINES AFTER THIS LINE ////////////////////
+
+function changeVersion (mumeVersion) {
+
+  if (mumeVersion == "6") {
+
+    MUMEVERSION   = 6
+
+    maxPoints     = 99       // In mume 6 its the stat sum that decide if you can continue
+
+    pointsLeft    = 99 - 56; // so from now on we consider this the statsum/whats left of statsum
+
+    pointsLeft2   = 99 - 56; // so from now on we consider this the statsum/whats left of statsum
+
+    minValue      = 6
+
+    statCosts     = new Array(12,  11, 10,  9,  8,  7,  6,  5,  4, 3, 2, 1, 0)
+
+    statValues    = new Array(18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6)
+
+    document.statForm.pointsSum.value = "Stat sum:"
+
+    document.statForm.pointsSum2.value = "Stat sum:"
+
+  } else {
+
+    MUMEVERSION   = 7
+
+    maxPoints     = 175
+
+    pointsLeft    = 175;
+
+    pointsLeft2    = 175;
+
+    minValue      = 8
+
+    statCosts     = new Array(55, 45, 36, 28, 21, 15, 10,  6,  3, 1, 0)
+
+    statValues    = new Array(18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8)
+
+    document.statForm.pointsSum.value = "Points left:"
+
+    document.statForm.pointsSum2.value = "Points left:"
+
+  }
+
+  changeRace(playerRace)
+
+  changeAge(playerAge)
+
+  resetStats()
+
+  resetStats2()
+
+}
+
+
+
+function resetStats() {
+
+  updateStats(startStats)
+
+  tmpStats   = new Array()
+
+//  tmpStats   = tmpStats.concat(startStats) // ONLY WORKS IN NETSCAPE 4.0+
+
+  for(var i = 0; i< startStats.length;i++) {
+
+    tmpStats[i] = startStats[i]
+
+  }
+
+  if (MUMEVERSION == 7) {
+
+    pointsLeft = maxPoints
+
+  } else {
+
+    pointsLeft = statSum(tmpStats)
+
+  }
+
+  document.statForm.pointsLeft.value = pointsLeft
+
+  updateStats(startStats)
+
+}
+
+
+
+function resetStats2() {
+
+  updateStats2(startStats)
+
+  tmpStats2   = new Array()
+
+  for(var i = 0; i< startStats.length;i++) {
+
+    tmpStats2[i] = startStats[i]
+
+  }
+
+  if (MUMEVERSION == 7) {
+
+    pointsLeft2 = maxPoints
+
+  } else {
+
+    pointsLeft2 = statSum(tmpStats2)
+
+  }
+
+  document.statForm.pointsLeft2.value = pointsLeft2
+
+  updateStats2(startStats)
+
+}
+
+
+
+function copyStats() {
+
+  for(var i = 0; i< tmpStats.length;i++) {
+
+    tmpStats2[i] = tmpStats[i]
+
+  }
+
+  pointsLeft2 = pointsLeft
+
+  document.statForm.pointsLeft2.value = pointsLeft
+
+  updateStats2(tmpStats2)
+
+}
+
+
+
+function inc(stat) {
+
+  if (tmpStats[stat - 1] < maxValue) {
+
+    if (MUMEVERSION == 7) {
+
+      var diff = statCost(1 + tmpStats[stat - 1]) - statCost(tmpStats[stat - 1])
+
+      if (pointsLeft - diff >= 0) {
+
+        pointsLeft -= diff
+
+        tmpStats[stat - 1]++
+
+        document.statForm.pointsLeft.value = pointsLeft + " ("+statSum(tmpStats)+", "+currentStatSum(tmpStats) +")"
+
+      }
+
+    } else {
+
+      if (pointsLeft + 1 <= maxPoints) {
+
+        pointsLeft++
+
+        tmpStats[stat - 1]++
+
+	var tmp = 0
+
+	for (var i=0;i < tmpStats.length;i++) {
+
+          tmp += ageModifiers[i] + raceModifiers[i]
+
+        }
+
+        document.statForm.pointsLeft.value = "("+statSum(tmpStats)+", "+ currentStatSum(tmpStats) +")"
+
+      }
+
+    }
+
+    updateStats(tmpStats)
+
+  }
+
+}
+
+
+
+function inc2(stat) {
+
+  if (tmpStats2[stat - 1] < maxValue) {
+
+    if (MUMEVERSION == 7) {
+
+      var diff = statCost(1 + tmpStats2[stat - 1]) - statCost(tmpStats2[stat - 1])
+
+      if (pointsLeft2 - diff >= 0) {
+
+        pointsLeft2 -= diff
+
+        tmpStats2[stat - 1]++
+
+        document.statForm.pointsLeft2.value = pointsLeft2 + " ("+statSum(tmpStats2)+", "+currentStatSum(tmpStats2) +")"
+
+      }
+
+    } else {
+
+      if (pointsLeft2 + 1 <= maxPoints) {
+
+        pointsLeft2++
+
+        tmpStats2[stat - 1]++
+
+	var tmp = 0
+
+	for (var i=0;i < tmpStats2.length;i++) {
+
+          tmp += ageModifiers[i] + raceModifiers[i]
+
+        }
+
+        document.statForm.pointsLeft2.value = "("+statSum(tmpStats2)+", "+ currentStatSum(tmpStats2) +")"
+
+      }
+
+    }
+
+    updateStats2(tmpStats2)
+
+  }
+
+}
+
+function dec(stat) {
+
+  if (tmpStats[stat - 1] > minValue) {
+
+    if (MUMEVERSION == 7) {
+
+      var dec = statCost(tmpStats[stat - 1]) - statCost(tmpStats[stat - 1] - 1)
+
+      pointsLeft += dec
+
+    } else {
+
+      pointsLeft--
+
+    }
+
+    tmpStats[stat - 1]--
+
+    document.statForm.pointsLeft.value = pointsLeft
+
+    updateStats(tmpStats)
+
+  }
+
+}
+
+
+
+function dec2(stat) {
+
+  if (tmpStats2[stat - 1] > minValue) {
+
+    if (MUMEVERSION == 7) {
+
+      var dec = statCost(tmpStats2[stat - 1]) - statCost(tmpStats2[stat - 1] - 1)
+
+      pointsLeft2 += dec
+
+    } else {
+
+      pointsLeft2--
+
+    }
+
+    tmpStats2[stat - 1]--
+
+    document.statForm.pointsLeft2.value = pointsLeft2
+
+    updateStats2(tmpStats2)
+
+  }
+
+}
+
+
+
+function currentStatSum(theStats) {
+
+  var sum = statSum(theStats)
+
+  for(var i = 0;i < theStats.length;i++) {
+
+    sum += ageModifiers[i] + ageModifiers[i]
+
+  }
+
+  return sum 
+
+}
+
+
+
+function statSum(theStats) {
+
+  var sum = 0
+
+  for (var i = 0; i < theStats.length; i++) {
+
+    sum += theStats[i]
+
+  }
+
+  return sum
+
+}
+
+
+
+function statCost(statValue) {
+
+  for (var i = 0; i < statValues.length; i++) {
+
+    if (statValue == statValues[i]) {return statCosts[i]}
+
+  }
+
+  return -1
+
+}
+
+
+
+function updateStats(theStats) {
+
+  for (var i = 1; i <= theStats.length; i++) {
+
+    eval("document.statForm.stat"+ i +".value = theStats[i-1] + raceModifiers[i-1] + ageModifiers[i-1]")
+
+  }
+
+
+
+//  document.frn.str.value=theStats[0]+raceModifiers[0];
+
+//  document.frn.inte.value=theStats[1]+raceModifiers[1];
+
+//  document.frn.wis.value=theStats[2]+raceModifiers[2];
+
+//  document.frn.dex.value=theStats[3]+raceModifiers[3];
+
+//  document.frn.con.value=theStats[4]+raceModifiers[4];
+
+//  document.frn.wil.value=theStats[5]+raceModifiers[5];
+
+//  document.frn.per.value=theStats[6]+raceModifiers[6];
+
+
+
+  var str=theStats[0]+raceModifiers[0];
+
+  var inte=theStats[1]+raceModifiers[1];
+
+  var wis=theStats[2]+raceModifiers[2];
+
+  var dex=theStats[3]+raceModifiers[3];
+
+  var con=theStats[4]+raceModifiers[4];
+
+  var wil=theStats[5]+raceModifiers[5];
+
+  var per=theStats[6]+raceModifiers[6];
+
+
+
+
+
+document.frn.awareness.value=20+3.75*per+2.6*inte;
+
+document.frn.climb.value=16+3*dex+2*wil+1.25*str;
+
+document.frn.first.value=18+3.75*inte+2.5*dex;
+
+document.frn.leadership.value=20+3.75*wil+2.5*wis;
+
+document.frn.ride.value=18+3.75*dex+2.5*wil;
+
+document.frn.swim.value=18+3*con+2*wil+1.33*dex;
+
+document.frn.wilderness.value=20+3.75*str+2.5*wil;
+
+
+
+document.frn.bash.value=50+1.67*str+dex+0.67*wil;
+
+document.frn.cleaving.value=50+1.56*str+dex+0.67*wil;
+
+document.frn.concussion.value=50+1.56*str+con+0.67*wil;
+
+document.frn.endurance.value=48+2.2*con+1.3*wil;
+
+document.frn.parry.value=50+1.56*dex+per+0.67*str;
+
+document.frn.rescue.value=52+1.4*dex+wil+0.67*str;
+
+document.frn.slashing.value=50+1.56*str+dex+0.67*per;
+
+
+
+document.frn.backstab.value=45+2*dex+1.25*per;
+
+document.frn.attack.value=45+2*dex+1.25*wil;
+
+document.frn.missile.value=45+2*per+1.25*dex;
+
+document.frn.pick.value=45+2*inte+1.25*dex;
+
+document.frn.piercing.value=46+1.4*dex+per+0.67*str;
+
+document.frn.search.value=45+2*inte+1.25*per;
+
+document.frn.envenom.value=32+2*dex+1.25*inte;
+
+
+
+document.frn.detectmagic.value=50+1.5*inte+wis+0.67*per;   
+
+document.frn.locate.value=50+1.5*inte+wis+0.67*wil;
+
+document.frn.createlight.value=50+2*inte+1.25*wis;
+
+document.frn.blockdoor.value=50+2*inte+1.25*wil;
+
+
+
+document.frn.curelight.value=50+1.875*wis+1.25*inte;
+
+document.frn.bless.value=45+1.5*wis+inte+0.67*wil;
+
+document.frn.senselife.value=37.5+1.5*wis+inte+0.67*wil;
+
+document.frn.blindness.value=50+1.875*wis+1.25*wil;
+
+
+
+computeDiff()
+
+}
+
+
+
+function updateStats2(theStats) {
+
+  for (var i = 1; i <= theStats.length; i++) {
+
+    eval("document.statForm.rstat"+ i +".value = theStats[i-1] + raceModifiers[i-1] + ageModifiers[i-1]")
+
+  }
+
+	computeDiff()
+
+}
+
+
+
+function addStatsToListT(theForm) {
+
+  var currentStats = new Array
+
+//  var tmp = "(" + MUMEVERSION + ") "
+
+  var tmp = ""
+
+  var sum = 0
+
+  for (var i = 0;i < tmpStats.length; i++) {
+
+    sum = tmpStats[i] + raceModifiers[i]
+
+    if (sum < 10) {
+
+      sum = " " + sum
+
+    }
+
+    tmp += sum + ", "
+
+  }
+
+  theForm.statListT.value = tmp + "[" + statSum(tmpStats) + "] " + "(Mume " + MUMEVERSION + ") " + playerRace + "\n" + theForm.statListT.value
+
+  theForm.statListT.value.fixed()
+
+}
+
+
+
+function changeAge(age) {
+
+  playerAge = age
+
+  if (age == "0") {
+
+    ageModifiers = new Array( 0,  0,  0,  0,  0,  0,  0)
+
+  }
+
+  if (age == "1") {
+
+    ageModifiers = new Array(-1,  1, -1,  1, -1,  2,  1)
+
+  }
+
+  if (age == "2") {
+
+    ageModifiers = new Array( 0,  1,  0,  1,  0,  2,  1)
+
+  }
+
+  if (age == "3") {
+
+    ageModifiers = new Array( 1,  1,  0,  0,  1,  1,  0)
+
+  }
+
+  if (age == "4") {
+
+    ageModifiers = new Array( 0,  0,  1,  0,  1,  1,  0)
+
+  }
+
+  if (age == "5") {
+
+    ageModifiers = new Array(-1,  0,  1, -1,  0,  0, -1)
+
+  }
+
+  if (age == "6") {
+
+    ageModifiers = new Array(-1,  0,  2, -2, -1,  0, -2)
+
+  }
+
+  if (age == "7") {
+
+    ageModifiers = new Array(-2, -1,  2, -3, -2,  0, -3)
+
+  }
+
+  if (age == "1") {
+
+    var firstAge = lifeRange * 17
+
+  } else {
+
+    var firstAge = lifeRange * ageBrackets[age]
+
+  }
+
+  if (age == "0") {
+
+    document.statForm.ageRange.value = ""
+
+  } else {
+
+    if (age == "7") {
+
+      var secondAge = "  "
+
+    } else {
+
+      var secondAge = (lifeRange * ageBrackets[++age]) -1
+
+    }
+
+    document.statForm.ageRange.value = "(" + firstAge + "-" + secondAge + ")"
+
+  }
+
+  updateStats(tmpStats)
+
+  updateStats2(tmpStats2)
+
+}
+
+
+
+function changeRace(race) {
+
+  playerRace = race
+
+    if (race == "Black Numenorean") {
+
+      raceModifiers = new Array( 0,  0, -1,  0,  0, -2,  0);
+
+      lifeRange = 1;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99 // What is the base stat sum for darkies ??? (i have one at 99)
+
+      }
+
+    } 
+
+    if (race == "Dwarf") {
+
+      raceModifiers = new Array( 1,  0, -1, -1,  1,  1, -1);
+
+      lifeRange = 2;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99
+
+      }
+
+    }
+
+    if (race == "Elf") {
+
+      raceModifiers = new Array(-1,  1,  0,  1, -1, -1,  1);
+
+      lifeRange = 3;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99
+
+      }
+
+    }
+
+    if (race == "Half-Elf") {
+
+      raceModifiers = new Array(-1,  0,  1,  0,  0,  0,  0);
+
+      lifeRange = 1;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99
+
+      }
+
+    }
+
+    if (race == "Hobbit") {
+
+      raceModifiers = new Array(-2, -1,  0,  1,  1,  1,  0);
+
+      lifeRange = 1.5;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99
+
+      }
+
+    }
+
+    if (race == "Human") {
+
+      raceModifiers = new Array( 0,  0,  0,  0,  0,  0,  0);
+
+      lifeRange = 1;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99
+
+      }
+
+    }
+
+    if (race == "Orc") {
+
+      raceModifiers = new Array( 2, -3, -2,  0,  2, -2,  0);
+
+      lifeRange = 2;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99 // What is the base stat sum for darkies ??? (i have one at 99)
+
+      }
+
+    }
+
+    if (race == "Troll") {
+
+      raceModifiers = new Array( 7, -3, -3, -3,  4, -3, -2);
+
+      lifeRange = 2;
+
+      if (MUMEVERSION == 6) {
+
+        maxPoints = 99 // What is the base stat sum for darkies ??? (i have one at 99)
+
+      }
+
+    }
+
+  changeAge(playerAge)
+
+  updateStats(tmpStats)
+
+  updateStats2(tmpStats2)
+
+}
+
+
+
+function computeDiff() {
+
+	var diff = 0;
+
+	for (var i = 0; i < tmpStats.length; i++) {
+
+		t1 = Math.abs(tmpStats[i] - tmpStats2[i]);
+
+		if (t1 == 1) {
+
+			diff += 14.25;
+
+		} else if (t1 == 2) {
+
+			diff += 33.75;
+
+		} else if (t1 == 3) {
+
+			diff += 56.25;
+
+		} else if (t1 == 4) {
+
+			diff += 80.75;
+
+		} else if (t1 == 5) {
+
+			diff += 106.75;
+
+		} else if (t1 == 6) {
+
+			diff += 134.25;
+
+		} else if (t1 == 7) {
+
+			diff += 162.5;
+
+		} else if (t1 == 8) {
+
+			diff += 192;
+
+		} else if (t1 == 9) {
+
+			diff += 222.75;
+
+		} else if (t1 == 10) {
+
+			diff += 254;
+
+		}
+
+	}
+
+  document.statForm.diffToMain.value = Math.floor(diff);
+
+}
+
+
+
+//-->
+
+</script>
+
+<!-- Changed by: Oskar Sandwall, Fri Jul 24 20:19:01 1998 -->
+
+
+
+<title>statgenerator</title>
+
+</head>
+
+
+
+<body bgcolor="#000000" text="#F5EF0A" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+<div align="left"><left>
+
+
+
+
+
+  <table BORDER="0" cellspacing="0" cellpadding="0" width="620">
+    <tr> 
+      <td ALIGN="center" valign="top" width="570"><big><big><big><font color="#FFFFFF"><strong>VrAK's 
+        stat generator for MUME</strong> </font></big></big></big> 
+        <hr SIZE="8" width="80%">
+        <form NAME="statForm">
+          <table BORDER="0" CELLPADDING="0" CELLSPACING="0" width="570">
+            <tr> 
+              <td ALIGN="CENTER" COLSPAN="8" NOWRAP>Mume version:<font SIZE="+1"> 
+                <select
+
+          NAME="mumeVersion" onChange="changeVersion(this.options[this.selectedIndex].value)"
+
+          size="1">
+                  <option VALUE="6">MUME VI (previous version) </option>
+                  <option VALUE="7" SELECTED>MUME VII (current version) </option>
+                </select>
+                </font> </td>
+            </tr>
+            <tr> 
+              <td ALIGN="RIGHT" COLSPAN="7" NOWRAP>Choose race: 
+                <select NAME="theClass"
+
+          onChange="changeRace(this.options[this.selectedIndex].value)" size="1">
+                  <option VALUE="Black Numenorean">Black Numenorean (*) </option>
+                  <option VALUE="Dwarf">Dwarf </option>
+                  <option VALUE="Elf">Elf </option>
+                  <option VALUE="Half-Elf">Half-Elf </option>
+                  <option VALUE="Hobbit">Hobbit </option>
+                  <option VALUE="Human" SELECTED>Human </option>
+                  <option VALUE="Orc">Orc (*) </option>
+                  <option VALUE="Troll">Troll (*) </option>
+                </select>
+              </td>
+              <td ALIGN="LEFT"><font SIZE="-1">The races with (*) after<br>
+                are much harder to play</font></td>
+            </tr>
+            <tr> 
+              <td ALIGN="RIGHT" COLSPAN="7" NOWRAP>Choose age: 
+                <select NAME="theAge"
+
+          onChange="changeAge(this.options[this.selectedIndex].value)" size="1">
+                  <option VALUE="0" SELECTED>No age modiefier </option>
+                  <option VALUE="1">1st age </option>
+                  <option VALUE="2">2nd age </option>
+                  <option VALUE="3">3rd age </option>
+                  <option VALUE="4">4th age </option>
+                  <option VALUE="5">5th age </option>
+                  <option VALUE="6">6th age </option>
+                  <option VALUE="7">7th age </option>
+                </select>
+              </td>
+              <td ALIGN="LEFT"> 
+                <input TYPE="TEXT" NAME="ageRange" SIZE="17">
+              </td>
+            </tr>
+            <tr> 
+              <td COLSPAN="8"> 
+                <hr SIZE="4" width="80%">
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER" COLSPAN="8"><font SIZE="+1">Stat generator</font> 
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER"><font SIZE="-1">Str</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Int</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Wiz</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Dex</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Con</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Wil</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Per</font> </td>
+              <td><font SIZE="-1"> 
+                <input TYPE="TEXT" NAME="pointsSum" VALUE="Points left:" SIZE="17">
+                </font></td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat1">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat2">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat3">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat4">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat5">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat6">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="stat7">
+              </td>
+              <td ALIGN="LEFT"> 
+                <input TYPE="TEXT" SIZE="17" NAME="pointsLeft">
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(1)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(1)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(2)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(2)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(3)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(3)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(4)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(4)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(5)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(5)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(6)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(6)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec(7)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc(7)">
+              </td>
+              <td ALIGN="left"> 
+                <input TYPE="BUTTON" VALUE="Reset stats" onClick="resetStats()">
+              </td>
+            </tr>
+            <tr> 
+              <td COLSPAN="8"> 
+                <hr SIZE="4" width="80%">
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER" COLSPAN="8"><font SIZE="+1">Reroll calculator</font> 
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER"><font SIZE="-1">Str</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Int</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Wiz</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Dex</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Con</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Wil</font> </td>
+              <td ALIGN="CENTER"><font SIZE="-1">Per</font> </td>
+              <td><font SIZE="-1"> 
+                <input TYPE="TEXT" NAME="pointsSum2" VALUE="Points left:" SIZE="17">
+                </font></td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat1">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat2">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat3">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat4">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat5">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat6">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="TEXT" SIZE="2" NAME="rstat7">
+              </td>
+              <td ALIGN="LEFT"> 
+                <input TYPE="TEXT" SIZE="17" NAME="pointsLeft2">
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(1)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(1)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(2)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(2)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(3)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(3)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(4)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(4)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(5)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(5)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(6)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(6)">
+              </td>
+              <td ALIGN="CENTER"> 
+                <input TYPE="BUTTON" VALUE="-" onClick="dec2(7)">
+                <input TYPE="BUTTON"
+
+          VALUE="+" onClick="inc2(7)">
+              </td>
+              <td ALIGN="left"> 
+                <input TYPE="BUTTON" VALUE="Copy stats from above" onClick="copyStats()">
+              </td>
+            </tr>
+            <td COLSPAN="4"><font SIZE="-1"> 
+              <input TYPE="TEXT" NAME="diffSum" VALUE="Diff (max 100):" SIZE="17">
+              </font></td>
+            <td ALIGN="LEFT" COLSPAN="4"> 
+              <input TYPE="TEXT" SIZE="17" NAME="diffToMain">
+            </td>
+            <tr> 
+              <td COLSPAN="8"> 
+                <hr SIZE="4" width="80%">
+              </td>
+            </tr>
+            <tr> </tr>
+            <tr> 
+              <td ALIGN="CENTER" COLSPAN="8"> 
+                <input TYPE="BUTTON" VALUE="Add stats to list"
+
+          onClick="addStatsToListT(this.form)">
+                <input type="BUTTON" value="Clear stats list"
+
+          onClick="this.form.statListT.value=''" name="BUTTON">
+                <br>
+                <textarea NAME="statInfo" ROWS="1" COLS="60"></textarea>
+              </td>
+            </tr>
+            <tr> 
+              <td ALIGN="CENTER" COLSPAN="8"> 
+                <textarea NAME="statListT" ROWS="6" COLS="60"></textarea>
+              </td>
+            </tr>
+</table>
+        </form>
+      </td>
+      <!-- added by frn --> 
+      <form name="frn">
+        <td align="left" valign="top"> 
+          <table cellspacing="0" cellpadding="0">
+            <tr align="left" valign="top"> 
+              <td> 
+                <table cellpadding=0 cellspacing=0 border=1 bordercolor="#999999">
+                  <tr align="left" valign="top"> 
+                    <td height="22" colspan="2"><font color="#FF0000">Ranger</font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Awareness, track:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="awareness" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Climb:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="climb" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">first:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="first" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">leadership:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="leadership" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">ride:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="ride" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">swim:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="swim" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">wilderness:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="wilderness" size=5>
+                      </font></td>
+                  </tr>
+                </table>
+              </td>
+              <td> 
+                <table cellpadding=0 cellspacing=0 border=1 bordercolor="#999999">
+                  <tr align="left" valign="top"> 
+                    <td colspan="2"><font color="#FF0000">Warrior</font><font size="-1"></font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Bash:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="bash" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Cleaving:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="cleaving" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Concussion, 2handed:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="concussion" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Endurance:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="endurance" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Parry:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="parry" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Rescue:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="rescue" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td><font size="-1">Slashing, stabbing:</font></td>
+                    <td> <font size="-1"> 
+                      <input name="slashing" size=5>
+                      </font></td>
+                  </tr>
+                </table>
+              </td>
+              <td> 
+                <table cellpadding=0 cellspacing=0 border=1 bordercolor="#999999">
+                  <tr align="left" valign="top"> 
+                    <td colspan="2"><font color="#FF0000">Thief</font><font size="-1"></font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">backstab, dodge, sneak, escape, 
+                      steal, hide:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="backstab" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">Attack:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="attack" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">Missile:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="missile" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">Pick:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="pick" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">Piercing:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="piercing" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">Search:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="search" size=5>
+                      </font></td>
+                  </tr>
+                  <tr align="left" valign="top"> 
+                    <td width="79"><font size="-1">Envenom:</font></td>
+                    <td width="42"> <font size="-1"> 
+                      <input name="envenom" size=5>
+                      </font></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table cellpadding=0 cellspacing=0 border=1 bordercolor="#999999">
+            <tr align="left" valign="top"> 
+              <td colspan="2"><font color="#FF0000">Mage</font><font size="-1"></font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">Detect magic, burning hands, shocking grasp, 
+                detect invisibility, lightning bolt, colour spray, fireball, identify, 
+                call lightning:</font></td>
+              <td> <font size="-1"> 
+                <input name="detectmagic" size=5>
+                </font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">locate, locate life, control weather:</font></td>
+              <td> <font size="-1"> 
+                <input name="locate" size=5>
+                </font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">create light, armour, shield, store, quake, 
+                enchant, shroud:</font></td>
+              <td> <font size="-1"> 
+                <input name="createlight" size=5>
+                </font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">block door, teleport, dispel magic, portal, 
+                charm, sleep:</font></td>
+              <td> <font size="-1"> 
+                <input name="blockdoor" size=5>
+                </font></td>
+            </tr>
+          </table>
+          <table cellpadding=0 cellspacing=0 border=1 bordercolor="#999999">
+            <tr align="left" valign="top"> 
+              <td colspan="2"><font color="#FF0000">Cleric</font><font size="-1"></font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">cure light, cure serious, cure blind, cure critic, 
+                remove poison, remove curse, heal, strength, sanctuary, create 
+                food, create water, bob, harm:</font></td>
+              <td> <font size="-1"> 
+                <input name="curelight" size=5>
+                </font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">bless:</font></td>
+              <td> <font size="-1"> 
+                <input name="bless" size=5>
+                </font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">sense life:</font></td>
+              <td> <font size="-1"> 
+                <input name="senselife" size=5>
+                </font></td>
+            </tr>
+            <tr align="left" valign="top"> 
+              <td><font size="-1">blindness, remove curse, break door, dispel 
+                evil, fear, summon, transfer, word of recall:</font></td>
+              <td> <font size="-1"> 
+                <input name="blindness" size=5>
+                </font></td>
+            </tr>
+          </table>
+        </td>
+        <td align="left" valign="top">&nbsp; </td>
+      </form>
+        </tr>
+</table>
+</div><script language="JavaScript">changeVersion(7);document.statForm.statInfo.value = "Str Int Wis Dex Con Wil Per Sum           Race ";document.statForm.statInfo.value.fixed()</script>
+</body>
+
+<!-- Mirrored from www.l0j1k.com/mume/content/stats/STATGEN.htm by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 22 Jul 2011 14:20:51 GMT -->
+</html>
+
